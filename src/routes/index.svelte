@@ -27,7 +27,7 @@
 </script>
 
 <div class='container' transition:fade>
-    <div id='notification'>enter a sample number</div>
+    <div id='notification'>enter a channel number</div>
     <input id='sample-input' type=number bind:value={sample} on:change={handleEntry} />
     <div id='error'>{error}</div>
 </div>
