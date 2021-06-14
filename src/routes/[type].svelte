@@ -1,0 +1,70 @@
+<script context="module">
+	export async function load({ page, fetch }) {
+        return { 
+            props: {
+                id: page.params.type
+            }
+        };
+	}
+</script>
+
+<script>
+    import { onMount } from 'svelte';
+    import { interacted } from '$lib/app.js';
+    import { fade } from 'svelte/transition';
+    export let id;
+
+    let source, audio;
+
+    function startAudio() {
+        audio.load();
+        audio.play();
+    }
+
+    function handleClick() {
+        $interacted = true;
+        startAudio();
+    }
+    
+    onMount(async() => {
+        source.src = `/sounds/${id}.mp3`;
+        if ($interacted === true)
+            startAudio();
+    })
+</script>
+
+<div class='container' transition:fade>
+    <div>sample {id}</div>
+    {#if $interacted === false}
+        <button id='start-button' on:click={handleClick} transition:fade>
+            play
+        </button>
+    {/if}
+</div>
+
+<audio controls bind:this={audio} loop={true}>
+    <source type='audio/mp3' bind:this={source}>
+    <track kind='captions'>
+</audio>
+
+<style>
+    audio {display: none}
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 40px;
+        gap: 50px;
+    }
+
+    #start-button {
+        font-family: var(--font);
+        border: 1px solid rgb(230, 230, 230);
+        background: none;
+        -webkit-appearance: none;
+        width: max-content;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+</style>
