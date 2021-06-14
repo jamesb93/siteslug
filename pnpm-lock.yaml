@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sveltejs/adapter-node': next
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^4.19.0
@@ -17,6 +18,7 @@ specifiers:
   typescript: ^4.0.0
 
 devDependencies:
+  '@sveltejs/adapter-node': 1.0.0-next.26
   '@sveltejs/adapter-static': 1.0.0-next.13
   '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
   '@typescript-eslint/eslint-plugin': 4.26.1_c8cbd5e7f5f92609ec78d991aced454b
@@ -100,6 +102,12 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.0
+    dev: true
+
+  /@sveltejs/adapter-node/1.0.0-next.26:
+    resolution: {integrity: sha512-jhlCBJH/Gyge0u5sx67UgEEHzoBk69Z9pXXtvERXrDyfmbao5v55zEaroPucc089CHKQvLRQJ3mGU81QZmk31Q==}
+    dependencies:
+      esbuild: 0.12.8
     dev: true
 
   /@sveltejs/adapter-static/1.0.0-next.13:
