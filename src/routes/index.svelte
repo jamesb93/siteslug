@@ -1,6 +1,6 @@
 <script>
     import { goto } from '$app/navigation';
-    import { maxSamples, interacted } from '$lib/app.js';
+    import { maxSamples } from '$lib/app.js';
     import { fade } from 'svelte/transition';
 
     let sample;
@@ -16,7 +16,6 @@
     function handleEntry () {
         // handles number input
         const rv = validateEntry(sample)
-        $interacted = true
         if (rv === true) {
             goto(`/${sample}`)
         } else {

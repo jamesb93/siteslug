@@ -17,6 +17,7 @@
     let source, audio;
 
     function startAudio() {
+        // audio.play();
         audio.load();
         audio.play();
     }
@@ -28,8 +29,6 @@
     
     onMount(async() => {
         source.src = `/sounds/${id}.mp3`;
-        if ($interacted === true)
-            startAudio();
     })
 </script>
 
