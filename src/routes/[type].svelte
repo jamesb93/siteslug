@@ -36,6 +36,7 @@
             play
         </button>
     {/if}
+    <div id='volume-warning'>Please turn up the volume on your device</div>
 </div>
 
 <audio controls bind:this={audio} loop={true}>
@@ -60,6 +61,11 @@
         width: max-content;
         margin: 0 auto;
         padding: 10px;
+    }
+
+    #volume-warning {
+        font-size: 15px;
+        color: grey;
     }
     
 </style>
