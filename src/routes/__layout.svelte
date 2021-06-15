@@ -16,8 +16,10 @@
     .container {
         display: flex;
         flex-direction: column;
-        max-width: 80%;
-        margin: 0 auto;
-        margin-top: 40%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
     }
 </style>

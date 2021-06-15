@@ -17,7 +17,8 @@
     let source, audio;
 
     function startAudio() {
-        // audio.play();
+        source.src = `/sounds/${id}.aac`;
+        audio.play();
         audio.load();
         audio.play();
     }
@@ -26,10 +27,6 @@
         $interacted = true;
         startAudio();
     }
-    
-    onMount(async() => {
-        source.src = `/sounds/${id}.mp3`;
-    })
 </script>
 
 <div class='container' transition:fade>
@@ -42,7 +39,7 @@
 </div>
 
 <audio controls bind:this={audio} loop={true}>
-    <source type='audio/mp3' bind:this={source}>
+    <source type='audio/aac' bind:this={source}>
     <track kind='captions'>
 </audio>
 
@@ -51,7 +48,6 @@
     .container {
         display: flex;
         flex-direction: column;
-        text-align: center;
         font-size: 40px;
         gap: 50px;
     }
