@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({ page, fetch }) {
+	export async function load({ page }) {
         return { 
             props: {
                 id: page.params.type
@@ -15,6 +15,11 @@
     export let id;
 
     let source, audio;
+    let canvas, pts;
+
+    onMount(async() => {
+
+    })
 
     function startAudio() {
         source.src = `/sounds/${id}.aac`;
