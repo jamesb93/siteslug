@@ -9,31 +9,47 @@
 </script>
 
 <script>
+    import { onMount } from 'svelte';
     import { interacted } from '$lib/app.js';
     import { fade } from 'svelte/transition';
     export let id;
-
     let source, audio;
+    let ready = false;
+    let paused = true;
 
-    function startAudio() {
+    onMount(async () => {
         source.src = `/sounds/${id}.aac`;
-        audio.play();
-        audio.load();
-        audio.play();
+        audio.volume = 0.5;
+        ready = true;
+    })
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            audio.load();
+            audio.play();
+        } else {
+            audio.pause();
+        }
+        paused = audio.paused;
     }
 
     function handleClick() {
         $interacted = true;
-        startAudio();
+        toggleAudio();
     }
 </script>
 
 <div class='container' transition:fade>
     <div>you are channel {id}</div>
-    {#if $interacted === false}
-        <button id='start-button' on:click={handleClick} transition:fade>
-            play
-        </button>
+    {#if ready}
+    <button id='start-button' on:click={handleClick} transition:fade>
+        {#if paused}
+        play
+        {:else}
+        stop
+        {/if}
+    </button>
     {/if}
     <div id='volume-warning'>Please turn up the volume on your device</div>
 </div>
