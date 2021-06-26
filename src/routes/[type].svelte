@@ -9,17 +9,11 @@
 </script>
 
 <script>
-    import { onMount } from 'svelte';
     import { interacted } from '$lib/app.js';
     import { fade } from 'svelte/transition';
     export let id;
 
     let source, audio;
-    let canvas, pts;
-
-    onMount(async() => {
-
-    })
 
     function startAudio() {
         source.src = `/sounds/${id}.aac`;
