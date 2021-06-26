@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export const maxSamples = writable(11);
+export const maxSamples = writable(150);
 export const interacted = writable(false);
 
 const colours = [
