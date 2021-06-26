@@ -9,7 +9,7 @@
     function validateEntry(entry) {
         // validates that the number will pertain to an actual sample
         const isNumber = typeof(entry) === 'number'
-        const inRange = entry >= 0 && entry < $maxSamples
+        const inRange = entry >= 1 && entry <= $maxSamples
         return isNumber && inRange
     }
 
