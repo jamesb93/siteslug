@@ -29,7 +29,7 @@
 </script>
 
 <div class='container' transition:fade>
-    <div>channel {id}</div>
+    <div>you are channel {id}</div>
     {#if $interacted === false}
         <button id='start-button' on:click={handleClick} transition:fade>
             play

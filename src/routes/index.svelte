@@ -20,13 +20,17 @@
             goto(`/${sample}`)
         } else {
             sample = ''
-            error = `Ensure you have the right sample number`
+            error = `Ensure you have the right channel number`
         }
     }
 </script>
 
 <div class='container' transition:fade>
-    <div id='notification'>enter a channel number</div>
+    <div >dear guest</div>
+    <div>(1) turn notifications off</div>
+    <div>(2) turn your volume up</div>
+    <div>(3) enter your ticket number</div>
+
     <input id='sample-input' type=number bind:value={sample} on:change={handleEntry} />
     <div id='error'>{error}</div>
 </div>
@@ -37,10 +41,6 @@
         flex-direction: column;
         margin: 0 auto;
         gap: 15px;
-    }
-
-    #notification {
-        text-align: center;
     }
 
     #error {
