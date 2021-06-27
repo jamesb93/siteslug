@@ -15,6 +15,8 @@
     export let id;
     let source, audio;
     let ready = false;
+    let loaded = false;
+    $: console.log(loaded)
     let paused = true;
 
     onMount(async () => {
@@ -42,7 +44,7 @@
 
 <div class='container' transition:fade>
     <div>you are channel {id}</div>
-    {#if ready}
+    {#if (ready && loaded)}
     <button id='start-button' on:click={handleClick} transition:fade>
         {#if paused}
         play
@@ -54,7 +56,7 @@
     <div id='volume-warning'>Please turn up the volume on your device</div>
 </div>
 
-<audio controls bind:this={audio} loop={true}>
+<audio controls bind:this={audio} loop={true} on:loadedmetadata={ ()=> loaded = true}>
     <source type='audio/mp3' bind:this={source}>
     <track kind='captions'>
 </audio>

@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); */
+
+@font-face {
+    font-family: 'MonospaceFont';
+    src: url('/fonts/MajorMonoDisplay-Regular.ttf') format('truetype')
+}
 
 :root {
-    --font: 'Major Mono Display', monospace;
+    --font: 'MonospaceFont', monospace;
 }
 
 html {
