@@ -18,7 +18,7 @@
     let paused = true;
 
     onMount(async () => {
-        source.src = `/sounds/${id}.aac`;
+        source.src = `/sounds/${id}.mp3`;
         audio.volume = 0.5;
         ready = true;
     })
