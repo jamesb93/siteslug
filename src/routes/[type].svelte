@@ -55,7 +55,7 @@
 </div>
 
 <audio controls bind:this={audio} loop={true}>
-    <source type='audio/aac' bind:this={source}>
+    <source type='audio/mp3' bind:this={source}>
     <track kind='captions'>
 </audio>
 
