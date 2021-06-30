@@ -43,17 +43,19 @@
 </script>
 
 <div class='container' transition:fade>
+    <div>sie sind kanal nr. {id}</div>
     <div>you are channel {id}</div>
     {#if (ready && loaded)}
     <button id='start-button' on:click={handleClick} transition:fade>
         {#if paused}
-        play
+        play/abspielen
         {:else}
-        stop
+        stop/stopp
         {/if}
     </button>
     {/if}
-    <div id='volume-warning'>Please turn up the volume on your device</div>
+    <div id='volume-warning'>bitte erhöhen sie die lautstärke ihres geräts</div>
+    <div id='volume-warning'>please turn up the volume on your device</div>
 </div>
 
 <audio controls bind:this={audio} loop={true} on:loadedmetadata={ ()=> loaded = true}>
@@ -75,9 +77,13 @@
         border: 1px solid rgb(230, 230, 230);
         background: none;
         -webkit-appearance: none;
-        width: max-content;
+        width: 180px;
         margin: 0 auto;
         padding: 10px;
+    }
+
+    #start-button:active {
+        background: rgb(238, 238, 238);
     }
 
     #volume-warning {

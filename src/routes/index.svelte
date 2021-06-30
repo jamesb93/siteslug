@@ -26,7 +26,14 @@
 </script>
 
 <div class='container' transition:fade>
-    <div >dear guest</div>
+    <div>lieber gast </div>
+    <div>(1) schalten sie die benachrichtigungen aus</div>
+    <div>(2) drehen sie die lautstärke zur hälfte auf </div>
+    <div>(3) geben sie ihre ticketnummer ein </div>
+
+    <br>
+
+    <div>dear guest</div>
     <div>(1) turn notifications off</div>
     <div>(2) turn your volume up</div>
     <div>(3) enter your ticket number</div>
