@@ -54,8 +54,6 @@
         {/if}
     </button>
     {/if}
-    <div id='volume-warning'>bitte erhöhen sie die lautstärke ihres geräts</div>
-    <div id='volume-warning'>please turn up the volume on your device</div>
 </div>
 
 <audio controls bind:this={audio} loop={true} on:loadedmetadata={ ()=> loaded = true}>
@@ -85,10 +83,4 @@
     #start-button:active {
         background: rgb(238, 238, 238);
     }
-
-    #volume-warning {
-        font-size: 13px;
-        color: grey;
-    }
-    
 </style>
