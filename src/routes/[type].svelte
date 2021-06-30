@@ -68,7 +68,7 @@
     .container {
         display: flex;
         flex-direction: column;
-        font-size: 40px;
+        font-size: 24px;
         gap: 50px;
     }
 
@@ -87,7 +87,7 @@
     }
 
     #volume-warning {
-        font-size: 15px;
+        font-size: 13px;
         color: grey;
     }
     
