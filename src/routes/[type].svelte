@@ -50,7 +50,7 @@
         {#if paused}
         play/abspielen
         {:else}
-        stop/stopp
+        stop
         {/if}
     </button>
     {/if}
