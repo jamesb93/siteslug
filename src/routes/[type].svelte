@@ -16,13 +16,13 @@
     let source, audio;
     let ready = false;
     let loaded = false;
-    $: console.log(loaded)
     let paused = true;
 
     onMount(async () => {
         source.src = `/sounds/${id}.mp3`;
         audio.volume = 0.5;
         ready = true;
+        loaded = true;
     })
 
     function toggleAudio() {
@@ -56,17 +56,18 @@
     {/if}
 </div>
 
-<audio controls bind:this={audio} loop={true} on:loadedmetadata={ ()=> loaded = true}>
+<audio controls bind:this={audio} loop={true}>
     <source type='audio/mp3' bind:this={source}>
     <track kind='captions'>
 </audio>
 
 <style>
     audio {display: none}
+
     .container {
         display: flex;
         flex-direction: column;
-        font-size: 24px;
+        font-size: 20px;
         gap: 50px;
     }
 
