@@ -20,7 +20,7 @@
 
     onMount(async () => {
         source.src = `/sounds/${id}.mp3`;
-        audio.volume = 0.5;
+        audio.volume = 0.25;
         ready = true;
         loaded = true;
     })
