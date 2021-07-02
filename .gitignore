@@ -4,3 +4,5 @@ node_modules
 /package
 build
 150files
+*.wav
+*.aif
