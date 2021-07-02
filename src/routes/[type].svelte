@@ -48,7 +48,7 @@
     {#if (ready && loaded)}
     <button id='start-button' on:click={handleClick} transition:fade>
         {#if paused}
-        play/abspielen
+        play
         {:else}
         stop
         {/if}
