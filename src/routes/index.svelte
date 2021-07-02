@@ -28,7 +28,7 @@
 <div class='container' transition:fade>
     <div>lieber gast </div>
     <div>(1) schalten sie die benachrichtigungen aus</div>
-    <div>(2) drehen sie die lautstärke zur hälfte auf </div>
+    <div>(2) drehen sie die lautstärke auf </div>
     <div>(3) geben sie ihre ticketnummer ein </div>
 
     <br>
