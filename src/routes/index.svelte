@@ -20,7 +20,7 @@
             goto(`/${sample}`)
         } else {
             sample = ''
-            error = `Ensure you have the right channel number`
+            error = `ensure you have the right channel number`
         }
     }
 </script>
