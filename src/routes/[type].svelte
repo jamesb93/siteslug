@@ -20,14 +20,14 @@
 
     onMount(async () => {
         source.src = `/sounds/${id}.mp3`;
-        audio.volume = 0.05;
+        audio.volume = 0.0125;
         ready = true;
         loaded = true;
         console.log(audio.volume)
     })
 
     function toggleAudio() {
-        audio.volume = 0.05;
+        audio.volume = 0.0125;
         if (audio.paused) {
             audio.play();
             audio.load();
