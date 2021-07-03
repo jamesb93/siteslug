@@ -23,6 +23,7 @@
         audio.volume = 0.125;
         ready = true;
         loaded = true;
+        console.log(audio.volume)
     })
 
     function toggleAudio() {
